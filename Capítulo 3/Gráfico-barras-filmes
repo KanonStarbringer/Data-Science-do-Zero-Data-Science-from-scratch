@@ -1,0 +1,18 @@
+import seaborn as sns
+from matplotlib import pyplot as plt
+
+sns.set_style('darkgrid')
+
+movies = ['Annie Hall', 'Ben-Hur', 'Casablanca', 'Gandhi', 'West Side Story']
+num_oscars = [5, 11, 3, 8, 10]
+
+#plote as barras com coordenadas x à esquerda [0,1,2,3,4], alturas[num_oscars]
+plt.bar(range(len(movies)), num_oscars)
+
+plt.title('My favorite movies')
+
+plt.xticks(range(len(movies)), movies)
+
+plt.ylabel('QTD oscars')
+
+plt.show()
